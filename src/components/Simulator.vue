@@ -58,8 +58,9 @@
                     <tbody>
                         <tr v-for="(linha, i) in detalhes" :key="i">
                             <td v-for="(v, k) in linha" :key="k">
-                                {{ formatCell(v) }}
+                                {{ formatCell(k, v) }}
                             </td>
+
                         </tr>
                     </tbody>
                 </table>
@@ -105,9 +106,29 @@ function moeda(v) {
     }).format(v || 0);
 }
 
-function formatCell(v) {
-    return typeof v === "number" ? moeda(v) : v;
+function formatCell(coluna, valor) {
+    if (valor === null || valor === undefined) return "-";
+
+    // Colunas que NÃO são monetárias
+    const colunasNumericas = [
+        "Mes",
+        "Mês",
+        "Parcela",
+        "Ano"
+    ];
+
+    if (colunasNumericas.includes(coluna)) {
+        return valor;
+    }
+
+    // Se for número, assume dinheiro
+    if (typeof valor === "number") {
+        return moeda(valor);
+    }
+
+    return valor;
 }
+
 </script>
 <style scoped>
 /* ===== BASE ===== */
