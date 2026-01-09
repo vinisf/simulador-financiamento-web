@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-
+        <h1>Simulador de Financiamento</h1>
         <form class="card" @submit.prevent="simular">
             <label>
                 Preço do imóvel
