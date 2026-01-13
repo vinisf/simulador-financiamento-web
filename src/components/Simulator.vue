@@ -34,6 +34,26 @@
                     <option value="ato">ATO adicional</option>
                 </select>
             </label>
+            <label>
+                INCC mensal (%)
+                <input v-model.number="form.taxaInccMensalPercentual" type="number" step="0.01" />
+            </label>
+
+            <label>
+                Meses de Seguro de Obra
+                <input v-model.number="form.mesesSeguroObraCrescendo" type="number" />
+            </label>
+
+            <label>
+                Parcela Caixa (pós-obra)
+                <input v-model.number="form.parcelaCaixaBase" type="number" />
+            </label>
+
+            <label>
+                Taxa de Condomínio
+                <input v-model.number="form.taxaCondominioMensal" type="number" />
+            </label>
+
 
             <button type="submit">Simular</button>
         </form>
@@ -76,12 +96,19 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 
 const form = reactive({
-    precoVenda: 230000,
-    financiamentoSubsidio: 150000,
-    valorAto: 10000,
-    valorInvestimentoInicial: 15000,
-    numParcelasConstrutora: 6,
-    cenarioEscolha: "investir"
+  precoVenda: 230000,
+  financiamentoSubsidio: 150000,
+  valorAto: 10000,
+  valorInvestimentoInicial: 15000,
+  numParcelasConstrutora: 6,
+
+  // 🔽 NOVOS CAMPOS
+  taxaInccMensalPercentual: 0.5,
+  mesesSeguroObraCrescendo: 3,
+  parcelaCaixaBase: 600,
+  taxaCondominioMensal: 250,
+
+  cenarioEscolha: "investir"
 });
 
 const resumo = ref(null);
