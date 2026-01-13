@@ -1,5 +1,50 @@
-# Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# 💻 Simulador de Financiamento Imobiliário — Frontend
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Frontend do **Simulador de Financiamento Imobiliário**, desenvolvido em **Vue 3 + Vite**, consumindo uma API própria em Node.js/Express.
+
+O objetivo é permitir a simulação realista de custos de um imóvel, considerando:
+
+- fase de obra (construtora + INCC + seguro)
+- fase pós-obra (parcela da Caixa + condomínio)
+- comparação de estratégias financeiras
+
+---
+
+## 🚀 Demo
+
+🔗https://simulador-financiamento-web-three.vercel.app/
+
+Backend (API):
+
+> https://simulador-financiamento-y2fi.onrender.com
+
+---
+
+## 🧠 O que este frontend faz
+
+- Formulário configurável para simulação financeira
+- Consumo de API REST externa
+- Exibição de:
+  - resumo financeiro consolidado
+  - tabela detalhada mês a mês
+- Correta separação entre:
+  - Parcela Construtora (com INCC)
+  - Parcela do Imóvel (Caixa)
+- Interface **responsiva e legível**
+- Formatação monetária em padrão brasileiro
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- **Vue 3** (Composition API)
+- **Vite**
+- **JavaScript (ES6+)**
+- **HTML5 / CSS3**
+- **Fetch API**
+- **Vercel** (deploy)
+
+---
+
+## 📦 Estrutura do projeto

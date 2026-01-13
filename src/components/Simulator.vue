@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-        <h1>Simulador de Financiamento</h1>
+        <h1>Simulador de Financiamento Imobiliário</h1>
         <form class="card" @submit.prevent="simular">
             <label>
                 Preço do imóvel
@@ -96,15 +96,13 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 
 const form = reactive({
-  precoVenda: 230000,
-  financiamentoSubsidio: 150000,
-  valorAto: 10000,
-  valorInvestimentoInicial: 15000,
-  numParcelasConstrutora: 6,
-
-  // 🔽 NOVOS CAMPOS
+  precoVenda: 237000,
+  financiamentoSubsidio: 164000,
+  valorAto: 9000,
+  valorInvestimentoInicial: 20000,
+  numParcelasConstrutora: 60,
   taxaInccMensalPercentual: 0.5,
-  mesesSeguroObraCrescendo: 3,
+  mesesSeguroObraCrescendo: 36,
   parcelaCaixaBase: 600,
   taxaCondominioMensal: 250,
 
